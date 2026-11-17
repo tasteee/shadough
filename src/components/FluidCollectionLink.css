@@ -1,0 +1,17 @@
+.fluidCollectionLink {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--fluidButtonHeight);
+  padding: var(--fluidSpace2) var(--fluidSpace4);
+  margin-right: var(--fluidSpace3);
+  background: var(--fluidPaper);
+  color: var(--fluidInk);
+  border: var(--fluidBorderStyle);
+  border-radius: var(--fluidRadius);
+  font-size: var(--fluidTextBody);
+  text-decoration: none;
+}
+.fluidCollectionLink:focus-visible {
+  outline: var(--fluidFocusWidth) solid var(--fluidAccent);
+  outline-offset: var(--fluidSpace1);
+}

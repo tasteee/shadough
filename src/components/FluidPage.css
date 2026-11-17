@@ -1,0 +1,444 @@
+.fluidPage {
+  height: var(--fluidViewportHeight);
+  overflow: auto;
+  background: var(--fluidPaper);
+  color: var(--fluidInk);
+  padding: 0 var(--fluidSpace6);
+  line-height: var(--fluidLineHeight);
+}
+.fluidHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--fluidSpace5);
+  padding: var(--fluidSpace5) 0;
+  border-bottom: var(--fluidBorderStyle);
+}
+.fluidWordmark {
+  display: flex;
+  align-items: baseline;
+  color: var(--fluidInk);
+  font-size: var(--fluidTextMedium);
+  font-weight: var(--fluidTextStrong);
+  text-decoration: none;
+}
+.fluidWordmark > span:first-child {
+  font-family: Georgia, serif;
+  font-style: italic;
+}
+.fluidBrandDivider {
+  margin: 0 var(--fluidSpace4);
+  color: var(--fluidBorder);
+  font-weight: normal;
+}
+.fluidBrandLabel {
+  color: var(--fluidMuted);
+  font-size: var(--fluidTextBody);
+  font-weight: normal;
+}
+.fluidNavigation {
+  display: flex;
+  gap: var(--fluidSpace2);
+}
+.fluidNavigation a {
+  color: var(--fluidMuted);
+  padding: var(--fluidSpace2) var(--fluidSpace4);
+  border-radius: var(--fluidRadius);
+  text-decoration: none;
+  font-size: var(--fluidTextBody);
+}
+.fluidNavigation a[aria-current] {
+  background: var(--fluidSelected);
+  color: var(--fluidAccent);
+}
+.fluidNavigation a:hover {
+  color: var(--fluidInk);
+}
+.fluidNavigation a span {
+  margin-left: var(--fluidSpace2);
+  font-size: var(--fluidTextSmall);
+}
+.fluidIntroduction {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: var(--fluidSpace6) 0;
+  gap: var(--fluidSpace5);
+}
+.fluidEyebrow,
+.fluidFooter {
+  font-size: var(--fluidTextSmall);
+  color: var(--fluidMuted);
+  letter-spacing: var(--fluidCapsTracking);
+}
+.fluidEyebrow {
+  text-transform: uppercase;
+  margin-bottom: var(--fluidSpace2);
+}
+.fluidIntroduction h1 {
+  font-size: var(--fluidTextTitle);
+  font-weight: var(--fluidTextWeight);
+  letter-spacing: var(--fluidTracking);
+  line-height: 1;
+}
+.fluidTitleDot {
+  color: var(--fluidAccent);
+}
+.fluidIntroText {
+  font-size: var(--fluidTextBody);
+  color: var(--fluidMuted);
+}
+.fluidWorkspace {
+  display: grid;
+  grid-template-columns: var(--fluidSidebar) minmax(0, 1fr);
+  height: var(--fluidWorkspaceHeight);
+  max-width: var(--fluidMaxWidth);
+  margin: 0 auto;
+  border: var(--fluidBorderStyle);
+  border-radius: var(--fluidRadius);
+  overflow: hidden;
+  background: var(--fluidPanel);
+}
+.fluidLibrary {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  border-right: var(--fluidBorderStyle);
+  padding: var(--fluidSpace4);
+}
+.fluidLibraryHeading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--fluidSpace2) var(--fluidSpace3) var(--fluidSpace4);
+}
+.fluidLibraryHeading h2 {
+  font-size: var(--fluidTextBody);
+  font-weight: var(--fluidTextStrong);
+}
+.fluidLibraryHeading > span {
+  color: var(--fluidMuted);
+  font-size: var(--fluidTextSmall);
+}
+.fluidPresetList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--fluidSpace1);
+  min-height: 0;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+.fluidLibraryFootnote {
+  color: var(--fluidMuted);
+  font-size: var(--fluidTextSmall);
+  margin: auto var(--fluidSpace3) 0;
+  padding-top: var(--fluidSpace5);
+}
+.fluidViewer {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+}
+.fluidStage {
+  position: relative;
+  isolation: isolate;
+  min-height: var(--fluidPreviewMin);
+  flex: 1;
+  background: var(--fluidStage);
+  overflow: hidden;
+}
+.fluidCanvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.fluidFallback {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.fluidStageCaption {
+  position: absolute;
+  inset: var(--fluidSpace5) var(--fluidSpace5) auto;
+  display: flex;
+  justify-content: space-between;
+  gap: var(--fluidSpace4);
+  font-size: var(--fluidTextSmall);
+  color: var(--fluidOnDark);
+  mix-blend-mode: difference;
+  pointer-events: none;
+}
+.fluidStatus {
+  position: absolute;
+  bottom: var(--fluidSpace5);
+  left: var(--fluidSpace5);
+  right: var(--fluidSpace5);
+  padding: var(--fluidSpace3);
+  color: var(--fluidInk);
+  background: var(--fluidPaper);
+  border-radius: var(--fluidRadius);
+  font-size: var(--fluidTextBody);
+}
+.fluidStudyDetails {
+  display: flex;
+  align-items: start;
+  gap: var(--fluidSpace6);
+  justify-content: space-between;
+  padding: var(--fluidSpace5);
+  border-top: var(--fluidBorderStyle);
+}
+.fluidStudyTitle {
+  display: flex;
+  align-items: baseline;
+  gap: var(--fluidSpace3);
+  white-space: nowrap;
+}
+.fluidStudyTitle > span {
+  color: var(--fluidMuted);
+  font-size: var(--fluidTextSmall);
+}
+.fluidStudyTitle h2 {
+  font-size: var(--fluidTextMedium);
+  font-weight: var(--fluidTextWeight);
+}
+.fluidStudyDetails p {
+  max-width: var(--fluidDescriptionWidth);
+  color: var(--fluidMuted);
+  font-size: var(--fluidTextBody);
+}
+.fluidControls {
+  display: flex;
+  align-items: center;
+  gap: var(--fluidSpace6);
+  padding: var(--fluidSpace5);
+  border-top: var(--fluidBorderStyle);
+}
+.fluidControls button {
+  font: inherit;
+  font-size: var(--fluidTextBody);
+  min-height: var(--fluidButtonHeight);
+  color: var(--fluidInk);
+  cursor: pointer;
+}
+.fluidPlayback {
+  display: flex;
+  gap: var(--fluidSpace3);
+  align-items: center;
+  padding: var(--fluidSpace2) var(--fluidSpace4);
+  background: var(--fluidPanel);
+  border: var(--fluidBorderStyle);
+  border-radius: var(--fluidRadius);
+  white-space: nowrap;
+}
+.fluidPlayback:hover {
+  background: var(--fluidSelected);
+}
+.fluidReset {
+  border: none;
+  background: transparent;
+  margin-left: auto;
+}
+.fluidSlider {
+  display: flex;
+  flex-direction: column;
+  gap: var(--fluidSpace2);
+  flex: 1;
+  font-size: var(--fluidTextSmall);
+}
+.fluidSlider > span {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--fluidSpace4);
+}
+.fluidSlider output {
+  color: var(--fluidMuted);
+  font-variant-numeric: tabular-nums;
+}
+.fluidSlider input {
+  width: 100%;
+  accent-color: var(--fluidAccent);
+  cursor: pointer;
+}
+.fluidFooter {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--fluidSpace4);
+  padding: var(--fluidSpace5) 0;
+  letter-spacing: normal;
+}
+.fluidPage button:focus-visible,
+.fluidPage a:focus-visible,
+.fluidPage input:focus-visible {
+  outline: var(--fluidFocusWidth) solid var(--fluidAccent);
+  outline-offset: var(--fluidSpace1);
+}
+.fluidPage button:disabled {
+  cursor: default;
+  color: var(--fluidMuted);
+}
+.fluidViewerToolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--fluidSpace4);
+  padding: var(--fluidSpace3) var(--fluidSpace5);
+  border-bottom: var(--fluidBorderStyle);
+}
+.fluidSourceLabel {
+  font-size: var(--fluidTextSmall);
+  color: var(--fluidMuted);
+}
+.fluidComparison {
+  display: flex;
+  padding: var(--fluidSpace1);
+  gap: var(--fluidSpace1);
+  background: var(--fluidPaper);
+  border: var(--fluidBorderStyle);
+  border-radius: var(--fluidRadius);
+}
+.fluidComparison button {
+  border: none;
+  border-radius: var(--fluidSmallRadius);
+  background: transparent;
+  font: var(--fluidControlFont);
+  font-size: var(--fluidTextSmall);
+  color: var(--fluidMuted);
+  padding: var(--fluidSpace2) var(--fluidSpace3);
+  cursor: pointer;
+}
+.fluidComparison button.isActive {
+  background: var(--fluidSelected);
+  color: var(--fluidAccent);
+}
+.fluidLearningPanel {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--fluidSpace3);
+  padding: var(--fluidSpace3) var(--fluidSpace5);
+  border-top: var(--fluidBorderStyle);
+  font-size: var(--fluidTextSmall);
+}
+.fluidTechnique {
+  flex: 1;
+}
+.fluidTechnique summary {
+  cursor: pointer;
+  padding: var(--fluidSpace2) 0;
+}
+.fluidTechnique p {
+  color: var(--fluidMuted);
+  max-width: var(--fluidDescriptionWidth);
+  padding-bottom: var(--fluidSpace2);
+}
+.fluidSourceControls {
+  display: flex;
+  align-items: center;
+  gap: var(--fluidSpace3);
+}
+.fluidSourceControls select {
+  font: var(--fluidControlFont);
+  font-size: var(--fluidTextSmall);
+  color: var(--fluidInk);
+  background: var(--fluidPaper);
+  border: var(--fluidBorderStyle);
+  padding: var(--fluidSpace2);
+  border-radius: var(--fluidSmallRadius);
+}
+.fluidUpload {
+  position: relative;
+  overflow: hidden;
+  padding: var(--fluidSpace2) var(--fluidSpace3);
+  border: var(--fluidBorderStyle);
+  border-radius: var(--fluidSmallRadius);
+  cursor: pointer;
+}
+.fluidUpload input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.fluidUpload:focus-within {
+  outline: var(--fluidFocusWidth) solid var(--fluidAccent);
+}
+.fluidUploadError {
+  flex-basis: 100%;
+}
+@media (max-width: 1050px) {
+  .fluidStudyDetails {
+    flex-direction: column;
+    gap: var(--fluidSpace2);
+  }
+  .fluidControls {
+    flex-wrap: wrap;
+    gap: var(--fluidSpace4);
+  }
+  .fluidPlayback {
+    flex-basis: 100%;
+    justify-content: center;
+  }
+}
+@media (max-width: 700px) {
+  .fluidPage {
+    padding: 0 var(--fluidSpace4);
+  }
+  .fluidHeader {
+    flex-wrap: wrap;
+    gap: var(--fluidSpace3);
+  }
+  .fluidBrandLabel,
+  .fluidBrandDivider {
+    display: none;
+  }
+  .fluidNavigation {
+    gap: 0;
+  }
+  .fluidNavigation a {
+    padding: var(--fluidSpace2);
+  }
+  .fluidIntroduction {
+    align-items: start;
+    flex-direction: column;
+    gap: var(--fluidSpace4);
+  }
+  .fluidWorkspace {
+    display: flex;
+    flex-direction: column-reverse;
+    height: auto;
+  }
+  .fluidStage {
+    aspect-ratio: var(--fluidStageRatio);
+    min-height: 0;
+    flex: none;
+  }
+  .fluidViewerToolbar {
+    flex-wrap: wrap;
+    gap: var(--fluidSpace2);
+  }
+  .fluidLearningPanel {
+    flex-direction: column;
+  }
+  .fluidStudyDetails,
+  .fluidControls {
+    padding: var(--fluidSpace4);
+  }
+  .fluidLibrary {
+    border-right: none;
+    border-top: var(--fluidBorderStyle);
+  }
+  .fluidPresetList {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .fluidFooter {
+    flex-direction: column;
+    gap: var(--fluidSpace1);
+  }
+}

@@ -1,0 +1,40 @@
+.fluidPresetButton {
+  display: flex;
+  align-items: center;
+  gap: var(--fluidSpace3);
+  width: 100%;
+  min-height: var(--fluidSidebarRow);
+  padding: var(--fluidSpace3);
+  border: var(--fluidRule) solid transparent;
+  border-radius: var(--fluidRadius);
+  background: transparent;
+  color: var(--fluidInk);
+  font: inherit;
+  font-size: var(--fluidTextBody);
+  text-align: left;
+  cursor: pointer;
+}
+.fluidPresetButton:hover {
+  background: var(--fluidPaper);
+}
+.fluidPresetButton.isSelected {
+  background: var(--fluidSelected);
+  border-color: var(--fluidBorder);
+}
+.fluidPresetNumber {
+  color: var(--fluidMuted);
+  font-size: var(--fluidTextSmall);
+  font-variant-numeric: tabular-nums;
+}
+.fluidPresetName {
+  flex: 1;
+}
+.fluidPresetSwatch {
+  width: var(--fluidSwatch);
+  height: var(--fluidSwatch);
+  border-radius: 50%;
+}
+.fluidPresetButton:focus-visible {
+  outline: var(--fluidFocusWidth) solid var(--fluidAccent);
+  outline-offset: var(--fluidRule);
+}

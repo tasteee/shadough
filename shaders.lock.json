@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "shaders": {
+    "4748989": {
+      "title": "foo",
+      "component": "Foo",
+      "file": "src/components/shaders/Foo.svelte",
+      "framework": "svelte",
+      "hash": "sha256:3ab94d270e59ad008a0c71cee4cd6963cb858f78f234e3993966a0458e31fc3f",
+      "updatedAt": "2026-11-08T08:24:17.822835+00:00",
+      "installedAt": "2026-11-08T08:24:20.579Z"
+    }
+  }
+}
